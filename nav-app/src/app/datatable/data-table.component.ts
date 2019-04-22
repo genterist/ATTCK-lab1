@@ -387,7 +387,7 @@ export class DataTableComponent implements AfterViewInit {
     //     Calls functions to format the data                               //
     //////////////////////////////////////////////////////////////////////////
 
-    constructor(private dataService: DataService, private tabs: TabsComponent, private sanitizer: DomSanitizer, private viewModelsService: ViewModelsService, public configService: ConfigService) {
+    constructor(public dataService: DataService, private tabs: TabsComponent, private sanitizer: DomSanitizer, private viewModelsService: ViewModelsService, public configService: ConfigService) {
         this.ds = dataService;
         this.ds.getConfig().subscribe((config: Object) => {
             this.ds.setUpURLs(config["enterprise_attack_url"],
