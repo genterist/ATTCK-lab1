@@ -43,7 +43,7 @@ export class TabsComponent implements AfterContentInit {
     ds: DataService = null;
     vms: ViewModelsService = null;
     techniques: Technique[] = [];
-    constructor(private _componentFactoryResolver: ComponentFactoryResolver, private viewModelsService: ViewModelsService, private dataService: DataService, private http: Http, private configService: ConfigService) {
+    constructor(private _componentFactoryResolver: ComponentFactoryResolver, private viewModelsService: ViewModelsService, private dataService: DataService, private http: Http, public configService: ConfigService) {
         let self = this;
         this.ds = dataService;
         this.viewModelsService = viewModelsService;
