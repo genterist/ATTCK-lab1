@@ -81,7 +81,7 @@
                      matTooltip="text">
                     <img src="assets/icons/ic_format_size_black_24px.svg"/>
                 </div>
-                <div class="dropdown-container font" *ngIf="currentDropdown === 'font'" #dropdown [class.left]="checkalign(dropdown)">
+                <div class="dropdown-container font" *ngIf="1===1" #dropdown [class.left]="checkalign(dropdown)">
                     <ul>
                         <li>
                             <mat-form-field>
@@ -172,7 +172,7 @@
                      [style.color]="showLegend() ? '#000000' : '#aaaaaa'">
                     <img [src]="showLegend()? 'assets/icons/ic_view_list_black_24px.svg' : 'assets/icons/ic_view_list_grey_24px.svg'"/>
                 </div>
-                <div class="dropdown-container legend" *ngIf="currentDropdown === 'legend'" #dropdown [class.left]="checkalign(dropdown)">
+                <div class="dropdown-container legend" *ngIf="1===1" #dropdown [class.left]="checkalign(dropdown)">
                     <ul>
                         <li>
                             <input [id]="uid + 'legendDockedCheckbox'"type="checkbox" class="checkbox-custom" [(ngModel)]="exportData.tableConfig.legendDocked" (change)="buildSVG()">
