@@ -17,7 +17,6 @@
         <li>
             <div class="control-row-item">
                 <div class="control-row-button dropdown noselect"
-                     (click)="dropdown = dropdown !== 'imgsize' ? 'imgsize' : null;"
                      matTooltipPosition="below"
                      matTooltip="image size">
                     <img src="assets/icons/ic_photo_size_select_large_black_24px.svg"/>
@@ -76,7 +75,6 @@
 
             <div class="control-row-item">
                 <div class="control-row-button dropdown noselect"
-                     (click)="dropdown = dropdown !== 'font' ? 'font' : null;"
                      matTooltipPosition="below"
                      matTooltip="text">
                     <img src="assets/icons/ic_format_size_black_24px.svg"/>
@@ -166,7 +164,6 @@
             </div>
             <div class="control-row-item">
                 <div class="control-row-button dropdown noselect"
-                     (click)="showLegend()? dropdown = dropdown !== 'legend' ? 'legend' : null : continue;"
                      matTooltipPosition="below"
                      matTooltip="legend"
                      [style.color]="showLegend() ? '#000000' : '#aaaaaa'">
@@ -237,7 +234,7 @@
             </div>
             <div class="control-row-item">
                 <div class="control-row-button dropdown noselect"
-                     (click)="dropdown = dropdown !== 'visibility' ? 'visibility' : null;"
+
                      matTooltipPosition="below"
                      matTooltip="display settings">
                     <img src="assets/icons/ic_visibility_black_24px.svg"/>
