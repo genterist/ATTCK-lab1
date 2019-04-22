@@ -234,12 +234,11 @@
             </div>
             <div class="control-row-item">
                 <div class="control-row-button dropdown noselect"
-
                      matTooltipPosition="below"
                      matTooltip="display settings">
                     <img src="assets/icons/ic_visibility_black_24px.svg"/>
                 </div>
-                <div class="dropdown-container visibility" *ngIf="dropdown === 'visibility'" #dropdown [class.left]="checkalign(dropdown)">
+                <div class="dropdown-container visibility" *ngIf="dropdown1===1" #dropdown [class.left]="checkalign(dropdown)">
                     <ul>
                         <li>
                             <input [id]="uid+'checkboxheader'" type="checkbox" class="checkbox-custom" [(ngModel)]="exportData.tableConfig.showHeader" (change)="buildSVG()">
