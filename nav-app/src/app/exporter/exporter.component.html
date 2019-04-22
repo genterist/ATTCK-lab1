@@ -16,13 +16,13 @@
         </li>
         <li>
             <div class="control-row-item">
-                <div class="control-row-button dropdown noselect"
+                <div class="control-row-buttoncurrentDropdown noselect"
                      (click)="currentDropdown = currentDropdown !== 'imgsize' ? 'imgsize' : null;"
                      matTooltipPosition="below"
                      matTooltip="image size">
                     <img src="assets/icons/ic_photo_size_select_large_black_24px.svg"/>
                 </div>
-                <div class="dropdown-container size" *ngIf="currentDropdown === 'imgsize'" #dropdown [class.left]="checkalign(dropdown)">
+                <div class="dropdown-container size" *ngIF="dropdown === 'imgsize'" #dropdown [class.left]="checkalign(currentDropdown)">
                     <ul>
                         <li>
                             <mat-form-field>
@@ -75,13 +75,13 @@
             </div>
 
             <div class="control-row-item">
-                <div class="control-row-button dropdown noselect"
+                <div class="control-row-buttoncurrentDropdown noselect"
                      (click)="currentDropdown = currentDropdown !== 'font' ? 'font' : null;"
                      matTooltipPosition="below"
                      matTooltip="text">
                     <img src="assets/icons/ic_format_size_black_24px.svg"/>
                 </div>
-                <div class="dropdown-container font" *ngIf="currentDropdown === 'font'" #dropdown [class.left]="checkalign(dropdown)">
+                <div class="dropdown-container font" *ngIF="dropdown === 'font'" #dropdown [class.left]="checkalign(currentDropdown)">
                     <ul>
                         <li>
                             <mat-form-field>
@@ -165,14 +165,14 @@
                 </div>
             </div>
             <div class="control-row-item">
-                <div class="control-row-button dropdown noselect"
+                <div class="control-row-buttoncurrentDropdown noselect"
                      (click)="showLegend()? currentDropdown = currentDropdown !== 'legend' ? 'legend' : null : continue;"
                      matTooltipPosition="below"
                      matTooltip="legend"
                      [style.color]="showLegend() ? '#000000' : '#aaaaaa'">
                     <img [src]="showLegend()? 'assets/icons/ic_view_list_black_24px.svg' : 'assets/icons/ic_view_list_grey_24px.svg'"/>
                 </div>
-                <div class="dropdown-container legend" *ngIf="currentDropdown === 'legend'" #dropdown [class.left]="checkalign(dropdown)">
+                <div class="dropdown-container legend" *ngIF="dropdown === 'legend'" #dropdown [class.left]="checkalign(currentDropdown)">
                     <ul>
                         <li>
                             <input [id]="uid + 'legendDockedCheckbox'"type="checkbox" class="checkbox-custom" [(ngModel)]="exportData.tableConfig.legendDocked" (change)="buildSVG()">
@@ -236,13 +236,13 @@
                 </div>
             </div>
             <div class="control-row-item">
-                <div class="control-row-button dropdown noselect"
+                <div class="control-row-buttoncurrentDropdown noselect"
                      (click)="currentDropdown = currentDropdown !== 'visibility' ? 'visibility' : null;"
                      matTooltipPosition="below"
                      matTooltip="display settings">
                     <img src="assets/icons/ic_visibility_black_24px.svg"/>
                 </div>
-                <div class="dropdown-container visibility" *ngIf="currentDropdown === 'visibility'" #dropdown [class.left]="checkalign(dropdown)">
+                <div class="dropdown-container visibility" *ngIF="dropdown === 'visibility'" #dropdown [class.left]="checkalign(currentDropdown)">
                     <ul>
                         <li>
                             <input [id]="uid+'checkboxheader'" type="checkbox" class="checkbox-custom" [(ngModel)]="exportData.tableConfig.showHeader" (change)="buildSVG()">

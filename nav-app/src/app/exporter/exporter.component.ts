@@ -614,14 +614,14 @@ export class ExporterComponent implements AfterViewInit {
     type(obj) { return typeof(obj) }
 
     /**
-     * Return whether the given currentDropdown element would overflow the side of the page if aligned to the right of its anchor
-     * @param  currentDropdown the DOM node of the panel
+     * Return whether the given dropdown element would overflow the side of the page if aligned to the right of its anchor
+     * @param  dropdown the DOM node of the panel
      * @return          true if it would overflow
      */
-    checkalign(currentDropdown): boolean {
+    checkalign(dropdown): boolean {
         // console.log(anchor)
-        let anchor = currentDropdown.parentNode;
-        return anchor.getBoundingClientRect().left + currentDropdown.getBoundingClientRect().width > document.body.clientWidth;
+        let anchor = dropdown.parentNode;
+        return anchor.getBoundingClientRect().left + dropdown.getBoundingClientRect().width > document.body.clientWidth;
     }
 
     /**
